@@ -4,6 +4,7 @@ metadata:
   name: tanzu-java-web-app
   annotations:
     serving.knative.dev/creator: fiserv
+    serving.knative.dev/lastModifier: fiserv
     ootb.apps.tanzu.vmware.com/servicebinding-workload: "true"
     ootb.apps.tanzu.vmware.com/apidescriptor-ref: "true"
     kapp.k14s.io/change-rule: upsert after upserting servicebinding.io/ServiceBindings
@@ -20,6 +21,7 @@ spec:
     metadata:
       annotations:
         serving.knative.dev/creator: fiserv
+        serving.knative.dev/lastModifier: fiserv
         autoscaling.knative.dev/minScale: "1"
         boot.spring.io/actuator: http://:8081/actuator
         boot.spring.io/version: 2.7.17
