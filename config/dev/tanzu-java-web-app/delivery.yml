@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: tanzu-java-web-app
   annotations:
+    serving.knative.dev/creator: fiserv
     ootb.apps.tanzu.vmware.com/servicebinding-workload: "true"
     ootb.apps.tanzu.vmware.com/apidescriptor-ref: "true"
     kapp.k14s.io/change-rule: upsert after upserting servicebinding.io/ServiceBindings
