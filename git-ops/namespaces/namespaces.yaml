@@ -12,8 +12,8 @@ metadata:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: #@ ns.name
-  namespace: #@ "git-auth-" + ns.name
+  name: #@ "git-auth-" + ns.name
+  namespace: #@ ns.name
 data:
   .secret-file: dmFsdWUtMg0KDQo=
 #@ end
