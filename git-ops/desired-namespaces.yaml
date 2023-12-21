@@ -1,0 +1,9 @@
+#@data/values
+---
+namespaces:
+#! The only required parameter is the name of the namespace. All additional values provided here 
+#! for a namespace will be available under data.values for templating additional sources
+- name: qa
+  supply_chain_service_account:
+    secrets:
+    - git
