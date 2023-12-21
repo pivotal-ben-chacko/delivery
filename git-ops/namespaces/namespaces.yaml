@@ -16,4 +16,12 @@ metadata:
   namespace: #@ ns.name
 spec:
   fromNamespace: tap-namespace-provisioning
+---
+apiVersion: secretgen.carvel.dev/v1alpha1
+kind: SecretExport
+metadata:
+  name: #@ "git-auth-" + ns.name
+  namespace: tap-namespace-provisioning
+spec:
+  toNamespace: #@ ns.name
 #@ end
