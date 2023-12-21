@@ -8,12 +8,4 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: #@ ns.name
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: #@ "git-auth-" + ns.name
-  namespace: #@ ns.name
-data:
-  .secret-file: dmFsdWUtMg0KDQo=
 #@ end
