@@ -7,7 +7,3 @@ namespaces:
   supply_chain_service_account:
     secrets:
     - git
-- name: qa
-  supply_chain_service_account:
-    secrets:
-    - git-auth-qa
