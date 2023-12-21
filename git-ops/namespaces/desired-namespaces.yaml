@@ -8,3 +8,6 @@ namespaces:
     secrets:
     - git
 - name: uat
+  supply_chain_service_account:
+    secrets:
+    - git-uat
