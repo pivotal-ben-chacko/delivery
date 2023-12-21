@@ -7,3 +7,4 @@ namespaces:
   supply_chain_service_account:
     secrets:
     - git-qa
+- name: uat
