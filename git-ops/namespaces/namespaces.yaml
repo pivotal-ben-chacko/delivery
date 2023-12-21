@@ -13,7 +13,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: #@ ns.name
-  namespace: #@ git-ns.name
+  namespace: #@ "git-" + ns.name
 data:
   .secret-file: dmFsdWUtMg0KDQo=
 #@ end
