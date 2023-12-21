@@ -8,4 +8,12 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: #@ ns.name
+---
+apiVersion: secretgen.carvel.dev/v1alpha1
+kind: SecretImport
+metadata:
+  name: #@ "git-auth-" + ns.name
+  namespace: #@ ns.name
+spec:
+  fromNamespace: tap-namespace-provisioning
 #@ end
