@@ -10,13 +10,13 @@ metadata:
   name: tap-java-test-pipeline
   namespace: dev
   labels:
-    apps.tanzu.vmware.com/pipeline: test      # (!) required
+    apps.tanzu.vmware.com/pipeline: test      #! required
     apps.tanzu.vmware.com/language: java
 spec:
   params:
     - name: sub-path
-    - name: source-url                        # (!) required
-    - name: source-revision                   # (!) required
+    - name: source-url                        #! required
+    - name: source-revision                   #! required
   tasks:
     - name: test
       params:
@@ -36,6 +36,6 @@ spec:
             image: gradle
             script: |
               cd `mktemp -d`
-              # wget -qO- $(params.source-url) | tar xvz -m
-              # cd tanzu-java-web-app
-              # gradle test 
+              #! wget -qO- $(params.source-url) | tar xvz -m
+              #! cd tanzu-java-web-app
+              #! gradle test 
