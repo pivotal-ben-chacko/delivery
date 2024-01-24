@@ -8,7 +8,6 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: tap-java-test-pipeline
-  namespace: dev
   labels:
     apps.tanzu.vmware.com/pipeline: test      #! required
     apps.tanzu.vmware.com/language: java
