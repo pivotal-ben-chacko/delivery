@@ -30,7 +30,7 @@ spec:
         carto.run/workload-name: react-frontend
     spec:
       containers:
-      - image: harbor.skynetsystems.io/tap/workloads/react-frontend-dev@sha256:ef0fbc95673aafa2c2b74cc673aa6b2bf3e44665bea41ffd1e73cc5e242c91db
+      - image: harbor.skynetsystems.io/tap/workloads/react-frontend-dev@sha256:4b014cb3477578543468646d6e4e99f46c17f13d119d4227f1485ced01ec0e8b
         name: workload
         resources: {}
         securityContext:
