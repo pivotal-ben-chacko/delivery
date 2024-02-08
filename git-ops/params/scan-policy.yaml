@@ -8,7 +8,6 @@ apiVersion: scanning.apps.tanzu.vmware.com/v1beta1
 kind: ScanPolicy
 metadata:
   name: scan-policy
-  namespace: dev
   labels:
     'app.kubernetes.io/part-of': 'enable-in-gui'
 spec:
