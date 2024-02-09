@@ -37,3 +37,5 @@ namespace_provisioner:
 ```
 
 For private repositories create a secret ref that points to the git credentials, see: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.6/tap/namespace-provisioner-use-case3.html#git-private
+
+Once all required credentials are exported, label your namespace for the controller to provision it: `kubectl label namespaces YOUR-NEW-DEVELOPER-NAMESPACE apps.tanzu.vmware.com/tap-ns=""`
