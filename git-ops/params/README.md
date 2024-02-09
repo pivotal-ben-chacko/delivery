@@ -1,5 +1,7 @@
 ## Namespace Provisioner (Controller Mode)
 
+[Namespace Provisioner Documentation (TAP 1.7)](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.7/tap/namespace-provisioner-use-case3.html)
+
 Namespace provisioner will create a secret called registries-credentials that will contain any registry secrets that have been exported to all namespaces using the following command:
 
 tanzu secret registry add harbor-credentials --server harbor.skynetsystems.io --username admin --password changeme --export-to-all-namespaces --yes --namespace tap-install
