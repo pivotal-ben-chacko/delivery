@@ -1,9 +1,10 @@
 ## Namespace Provisioner (Controller Mode)
 
-Namespace provisioner will create a secret called registries-credentials that will contain any registry secrets that have been exported using the following command:
+Namespace provisioner will create a secret called registries-credentials that will contain any registry secrets that have been exported to all namespaces using the following command:
 
 tanzu secret registry add harbor-credentials --server harbor.skynetsystems.io --username admin --password changeme --export-to-all-namespaces --yes --namespace tap-install
 
+Use `tanzu secret registry list -A` to see all secrets that have been exported to all namespaces.
 
 tap-values file will need to be updated with the following parameters:
 
