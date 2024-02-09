@@ -41,3 +41,18 @@ namespace_provisioner:
 For private repositories create a secret ref that points to the git credentials, see: [Doc](https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.6/tap/namespace-provisioner-use-case3.html#git-private)
 
 Once all required credentials are exported, label your namespace for the controller to provision it: `kubectl label namespaces YOUR-NEW-DEVELOPER-NAMESPACE apps.tanzu.vmware.com/tap-ns=""`
+
+In order to select and apply the appropriate Tekton Pipeline and Scan policy, add the following labels to the namespace:
+
+```
+  kubectl label namespaces YOUR-NEW-DEVELOPER-NAMESPACE tap.tanzu.vmware.com/pipeline=java
+  kubectl label namespaces YOUR-NEW-DEVELOPER-NAMESPACE tap.tanzu.vmware.com/scanpolicy=lax
+```
+
+YTT logic inserted at the very beginning of each file in the **git-ops/params** directory will or will not get applied based on the profile running in the cluster and the label assigned to the namespace.
+
+In the case above: 
+  - the **java** pipeline will be selected and applied if profile is (full, iterate, build) and the label **tap.tanzu.vmware.com/pipeline: java** is assigned to the namespace
+  - the **lax** scan policy will be selected and applied if profile is (full, build) and the label **tap.tanzu.vmware.com/scanpolicy: lax** is assigned to the namespace
+
+
