@@ -34,3 +34,5 @@ namespace_provisioner:
   parameter_prefixes:
   - tap.tanzu.vmware.com
 ```
+
+For private repositories create a secret ref that points to the git credentials, see: https://docs.vmware.com/en/VMware-Tanzu-Application-Platform/1.6/tap/namespace-provisioner-use-case3.html#git-private
