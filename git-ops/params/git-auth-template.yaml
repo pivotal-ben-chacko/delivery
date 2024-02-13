@@ -3,10 +3,10 @@
 apiVersion: v1
 kind: Secret
 metadata:
- name: git
- annotations:
-   tekton.dev/git-0: #@ data.values.imported.git.host
+  name: git
+  annotations:
+    tekton.dev/git-0: #@ data.values.imported.git.host
 type: kubernetes.io/basic-auth
 stringData:
- username: #@ data.values.imported.git.username
- password: #@ data.values.imported.git.token
+  username: #@ data.values.imported.git.username
+  password: #@ data.values.imported.git.token
