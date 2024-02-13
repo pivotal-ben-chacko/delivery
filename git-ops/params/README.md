@@ -84,7 +84,7 @@ stringData:
 EOF
 
 2. Add the following secret template to git repo in path **git-ops/params**
-```
+```bash
 #@ load("@ytt:data", "data")
 ---
 apiVersion: v1
